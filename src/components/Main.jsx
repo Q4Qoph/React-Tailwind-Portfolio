@@ -9,13 +9,17 @@ import {
 } from "react-icons/fa6";
 import { FiArrowDownCircle } from 'react-icons/fi';
 
+// Import the image from src/assets/images
+import backgroundImage from '../assets/images/pic1.jpg';
+
 const Main = () => {
   return (
     <div id="main">
       <img
         className="w-full h-screen object-cover object-left scale-x-[-1]"
-        src="assets/images/pic1.jpg"
-        alt=""
+        // Use the imported image
+        src={backgroundImage}
+        alt="background"
       />
       <div className="w-full h-screen absolute top-0 left-0 bg-white/50">
         <div className="max-w-[700px] m-auto h-full flex flex-col justify-center lg:items-start items-center">
@@ -26,7 +30,6 @@ const Main = () => {
             I'm a
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
                 "Junior Software Developer",
                 2000,
                 "Creative Designer",
@@ -45,11 +48,6 @@ const Main = () => {
             />
           </h2>
           <div className="flex justify-between pt-6 max-w-[200px] w-full">
-            {/* <FaFacebookF className='cursor-pointer' size={20}/>
-              <FaTwitter   className='cursor-pointer' size={20}/>
-              <FaInstagram className='cursor-pointer' size={20} />
-              <FaLinkedinIn className='cursor-pointer' size={20} /> 
-                          */}
             <a
               href="https://www.linkedin.com"
               target="_blank"
@@ -102,17 +100,17 @@ const Main = () => {
             </a>
           </div>
           <div className="flex justify-center sm:block">
-          <a
-						download="Fredie-Resume"
-						href="/files/CV_nyandiek.pdf"
-						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-gray-800 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-transparent text-gray-800 hover:text-white duration-500"
-						aria-label="Download Resume"
-					>
-						<FiArrowDownCircle className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>
-						<span className="text-sm sm:text-lg font-general-medium duration-100">
-							Download CV
-						</span>
-					</a>
+            <a
+              download="Fredie-Resume"
+              href="/files/CV_nyandiek.pdf"
+              className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-gray-800 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-transparent text-gray-800 hover:text-white duration-500"
+              aria-label="Download Resume"
+            >
+              <FiArrowDownCircle className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>
+              <span className="text-sm sm:text-lg font-general-medium duration-100">
+                Download CV
+              </span>
+            </a>
           </div>
         </div>
       </div>
